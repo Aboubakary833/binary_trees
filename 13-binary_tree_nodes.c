@@ -11,10 +11,11 @@ size_t get_binary_tree_height(const binary_tree_t *tree);
  */
 size_t binary_tree_nodes(const binary_tree_t *tree)
 {
-	size_t height = get_binary_tree_height(tree);
+	size_t height = 0;
 
-	if (!height)
+	if (!tree)
 		return (0);
+	height = get_binary_tree_height(tree);
 
 	return ((height * 2) - 1);
 }
